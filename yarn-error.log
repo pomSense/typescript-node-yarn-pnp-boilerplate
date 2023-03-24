@@ -1,0 +1,31 @@
+Arguments: 
+  /Users/pom/.nvm/versions/node/v16.16.0/bin/node /Users/pom/Code/voice-ai/.yarn/releases/yarn-1.22.19.cjs set version 3
+
+PATH: 
+  /Users/pom/.pyenv/shims:/Users/pom/.yarn/bin:/Users/pom/.config/yarn/global/node_modules/.bin:/Users/pom/.nvm/versions/node/v16.16.0/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Users/pom/.pyenv/shims:/Users/pom/.yarn/bin:/Users/pom/.config/yarn/global/node_modules/.bin:/Users/pom/.nvm/versions/node/v16.16.0/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: Release not found: 3
+      at /Users/pom/Code/voice-ai/.yarn/releases/yarn-1.22.19.cjs:94385:17
+      at Generator.next (<anonymous>)
+      at step (/Users/pom/Code/voice-ai/.yarn/releases/yarn-1.22.19.cjs:310:30)
+      at /Users/pom/Code/voice-ai/.yarn/releases/yarn-1.22.19.cjs:321:13
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
