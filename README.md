@@ -2,7 +2,7 @@
 
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/pomsense.svg?style=social&label=Follow%20%40pomsense)](https://twitter.com/pomsense)
 
-A production-ready boiler plate that works out of the box using Yarn PnP (Zero Install). This project has strong commit and lint enforcement. You can configure any of this to cater to your project, though the default setup is recommended to drive both an efficient dev process and enforce code quality.
+A production-ready boilerplate that works out of the box using Yarn PnP (Zero Install). This project has strong commit and lint enforcement. You can configure any of this to cater to your project, though the default setup is recommended to drive both an efficient dev process and enforce code quality.
 
 Features include:
 
