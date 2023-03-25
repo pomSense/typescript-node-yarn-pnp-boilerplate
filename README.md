@@ -1,4 +1,4 @@
-# A production-ready Typescript, Node.js boilerplate with Yarn Zero Install
+# A Production-Ready Typescript, Node.js Boilerplate with Yarn Zero Install
 
 A production-ready boiler plate that works out of the box using Yarn PnP (Zero Install). This project has strong commit and lint enforcement. You can configure any of this to cater to your project, though the default setup is recommended to drive both an efficient dev process and enforce code quality.
 
