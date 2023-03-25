@@ -6,3 +6,8 @@
 /**/*.js
 
 .lintstagedrc.js
+cspell.yml
+package.json
+tsconfig.json
+.eslintrc
+README.md

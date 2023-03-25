@@ -2,7 +2,7 @@
 
 A production-ready boiler plate that works out of the box using Yarn PnP (Zero Install). This project has strong commit and lint enforcement. You can configure any of this to cater to your project, though the default setup is recommended to drive both an efficient dev process and enforce code quality.
 
-Scaffhold includes:
+Features include:
 
 - Yarn 3.5.0 with zero install
 - TypeScript 5.0
@@ -33,6 +33,10 @@ yarn husky install
 yarn launch
 ```
 
+# Husky
+
+Husky helps run spelling and lint checks upon committing. This makes a much more efficient dev process and catches this prior to linting on .github actions (future feature).
+
 # Yarn
 
 When running a yarn command, if you get issues, fail-safe is always to just use `yarn run {your command}`
@@ -60,7 +64,7 @@ Commits must start with:
 
 # VS Code - TypeScript Version
 
-If you are getting TypeScript errors in VS vode but not in the terminal, that is because when using VS Code, you have to set the typescript version to use the workspace's version.
+If you are getting TypeScript errors in VS code but not in the terminal, that is because when using VS Code, you have to set the typescript version to use the workspace's version.
 
 - To do this, open the `index.ts` do `cmd`+`shift`+`p`.
 - Select `TypeScript: Select TypeScript Version...` (NOTE: This will only show if you do the previous step with a TypeScript file open)

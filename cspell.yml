@@ -36,12 +36,15 @@ ignorePaths:
   - package.json
   - '.github'
   - '**/*.json'
-  - '**/*.gitignore'
+  - .gitignore'
   - '.yarn'
   - '.pnp.*'
   - '*.html'
   - '*.webp'
   - '*.xml'
+  - '.husky/**/*'
+  - .eslintrc
+  - .eslintignore
 
 ignoreRegExpList:
   # GitHub Security Advisories
