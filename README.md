@@ -4,7 +4,7 @@ A production-ready boiler plate that works out of the box using Yarn PnP (Zero I
 
 Features include:
 
-- Yarn 3.5.0 with zero install
+- [Yarn](#yarn) 3.5.0 with zero install
 - TypeScript 5.0
 - Eslint: Strict eslint that is production ready that enforces:
   - kebab case for files
@@ -12,36 +12,34 @@ Features include:
   - strong typing with no-explicit-any
   - ...and more (See `.eslintrc`; you can disable things you don't need)
 - Prettier
-- Husky for pre-commit linting enforcement
-- C-Spell for spell check on commits
+- [Husky](#husky) for [pre-commit](#commit-rules) linting enforcement
+- [CSpell](#spell-check) for spell check on commits
 
 # Getting-started
 
-Pull the repo, and do `yarn`
+Clone the repo by click the [Use this template](https://github.com/pomSense/typescript-node-yarn-pnp-boilerplate/generate) button.
 
-Do the following to confirm it is working:
-
-```
-yarn install
-```
+## Clone and run
 
 ```
+git clone https://github.com/pomSense/typescript-node-yarn-pnp-boilerplate
+cd typescript-node-yarn-pnp-boilerplate
+yarn
 yarn husky install
-```
-
-```
 yarn launch
 ```
 
-# Husky
+Make sure to setup your [VScode typescript version](#vs-code---typescript-version).
+
+## Husky
 
 Husky helps run spelling and lint checks upon committing. This makes a much more efficient dev process and catches this prior to linting on .github actions (future feature).
 
-# Yarn
+## Yarn
 
 When running a yarn command, if you get issues, fail-safe is always to just use `yarn run {your command}`
 
-# Commit rules
+## Commit rules
 
 Currently, strong commit rules are enforced that are used in top engineering projects. They're located in `.commitlintrc`.
 
@@ -62,7 +60,7 @@ Commits must start with:
 "test"
 ```
 
-# VS Code - TypeScript Version
+## VS Code - TypeScript Version
 
 If you are getting TypeScript errors in VS code but not in the terminal, that is because when using VS Code, you have to set the typescript version to use the workspace's version.
 
@@ -70,12 +68,8 @@ If you are getting TypeScript errors in VS code but not in the terminal, that is
 - Select `TypeScript: Select TypeScript Version...` (NOTE: This will only show if you do the previous step with a TypeScript file open)
 - Choose `Use Workspace Version`
 
-# Spell check
+## Spell check
 
 This project uses spell check. Configuration lives in `cspell.yml`.
 
 You can add words that are specific to your project in `cspell-project-words.txt`.
-
-# Credit
-
-Based on silver-xu's [ts-boilerplate.md](https://gist.github.com/silver-xu/1dcceaa14c4f0253d9637d4811948437).
