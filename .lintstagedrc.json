@@ -1,5 +1,5 @@
 {
   "*": ["cspell --no-must-find-files --no-progress"],
   "**/*.{ts,tsx}": ["prettier --write"],
-  "**/*.{md,yml,json,babelrc,eslintrc,prettierrc}": ["prettier --write"]
+  "**/*.{md,yml,json,babelrc,eslintrc,prettierrc}": ["prettier --write", "yarn lint"]
 }
