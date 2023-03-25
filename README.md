@@ -1,10 +1,16 @@
-# A Simple Typescript, Node.js boilerplate with Yarn Zero Install
+# A production-ready Typescript, Node.js boilerplate with Yarn Zero Install
+
+A boiler plate that works out of the box using Yarn PnP (Zero Install).
 
 Scaffhold includes:
 
 - Yarn 3.5.0 with zero install
-- TypeScript
-- Eslint
+- TypeScript 5.0
+- Eslint: Strict eslint that is production ready that enforces:
+  - kebab case for files
+  - camel case for variables
+  - strong typing with no-explicit-any
+  - ...and more (See `.eslintrc`; you can disable things you don't need)
 - Prettier
 - Husky for pre-commit linting
 

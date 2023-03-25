@@ -1,0 +1,8 @@
+**/dist/**
+**/build/**
+
+**/__tests__/**
+**/*.d.ts
+/**/*.js
+
+.lintstagedrc.js

@@ -1,0 +1,21 @@
+# Yarn zero install
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Build files
+dist
+
+# Types
+!**/declarations.d.ts
+
+# VS Code
+.vscode
+!.vscode/tasks.js
+
+# DS Store
+.DS_Store
