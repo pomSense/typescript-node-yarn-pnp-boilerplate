@@ -1,0 +1,35 @@
+{
+  "extends": ["config:base"],
+  "labels": ["dependencies"],
+  "timezone": "UTC",
+  "schedule": ["at 9am on Friday"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["eslint"],
+      "labels": ["linting"]
+    },
+    {
+      "matchDepTypes": ["optionalDependencies"],
+      "addLabels": ["optional"]
+    }
+  ],
+  "prHourlyLimit": 3,
+  "updateInternalDeps": true,
+  "rebaseWhen": "auto",
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"]
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 5am on sunday"],
+    "automerge": true,
+    "automergeType": "pr",
+    "platformAutomerge": true
+  },
+  "npm": {
+    "stabilityDays": 14
+  },
+  "reviewers": ["@pomSense"],
+  "assignees": ["@tanuj-chaine"]
+}

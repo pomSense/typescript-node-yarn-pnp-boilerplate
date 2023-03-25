@@ -1,6 +1,6 @@
 # A production-ready Typescript, Node.js boilerplate with Yarn Zero Install
 
-A boiler plate that works out of the box using Yarn PnP (Zero Install).
+A production-ready boiler plate that works out of the box using Yarn PnP (Zero Install). This project has strong commit and lint enforcement. You can configure any of this to cater to your project, though the default setup is recommended to drive both an efficient dev process and enforce code quality.
 
 Scaffhold includes:
 
@@ -12,7 +12,8 @@ Scaffhold includes:
   - strong typing with no-explicit-any
   - ...and more (See `.eslintrc`; you can disable things you don't need)
 - Prettier
-- Husky for pre-commit linting
+- Husky for pre-commit linting enforcement
+- C-Spell for spell check on commits
 
 # Getting-started
 
@@ -52,6 +53,12 @@ If you are getting TypeScript errors in VS vode but not in the terminal, that is
 - To do this, open the `index.ts` do `cmd`+`shift`+`p`.
 - Select `TypeScript: Select TypeScript Version...` (NOTE: This will only show if you do the previous step with a TypeScript file open)
 - Choose `Use Workspace Version`
+
+# Spell check
+
+This project uses spell check. Configuration lives in `cspell.yml`.
+
+You can add words that are specific to your project in `cspell-project-words.txt`.
 
 # Credit
 
