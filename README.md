@@ -22,8 +22,20 @@ Pull the repo, and do `yarn`
 Do the following to confirm it is working:
 
 ```
+yarn install
+```
+
+```
+yarn husky install
+```
+
+```
 yarn launch
 ```
+
+# Yarn
+
+When running a yarn command, if you get issues, fail-safe is always to just use `yarn run {your command}`
 
 # Commit rules
 

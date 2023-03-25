@@ -8,7 +8,7 @@ function launchRocket() {
   setTimeout(() => {
     clearInterval(loadingInterval1) // Stop first loading bar
 
-    // Start second loading barr
+    // Start second loading bar
     const loadingInterval2 = setInterval(() => {
       process.stdout.write('🔥')
     }, 300)
