@@ -16,7 +16,7 @@ function launchRocket() {
     // Wait for 2 seconds
     setTimeout(() => {
       clearInterval(loadingInterval2) // Stop second loading bar
-      // loadingg
+
       console.log('🚀')
       console.log('\nLaunched!')
     }, 2000)

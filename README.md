@@ -24,6 +24,27 @@ Do the following to confirm it is working:
 yarn launch
 ```
 
+# Commit rules
+
+Currently, strong commit rules are enforced that are used in top engineering projects. They're located in `.commitlintrc`.
+
+Commits must start with:
+
+```
+ "merge",
+"build",
+"chore",
+"ci",
+"docs",
+"feat",
+"fix",
+"perf",
+"refactor",
+"revert",
+"style",
+"test"
+```
+
 # VS Code - TypeScript Version
 
 If you are getting TypeScript errors in VS vode but not in the terminal, that is because when using VS Code, you have to set the typescript version to use the workspace's version.
