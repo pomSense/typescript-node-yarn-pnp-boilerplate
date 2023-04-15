@@ -9,6 +9,14 @@
     "npm": "🚨 👉👉 Please use yarn 👈👈 🚨",
     "yarn": "3.5.0"
   },
+  "keywords": [
+    "typescript",
+    "yarn",
+    "pnp",
+    "zero install",
+    "boilerplat",
+    "scaffold"
+  ],
   "packageManager": "yarn@3.5.0",
   "devDependencies": {
     "@commitlint/cli": "^17.5.0",
