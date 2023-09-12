@@ -1,0 +1,5 @@
+{
+  "name": "@typescript-node-yarn-pnp-boilerplate/package-a",
+  "packageManager": "yarn@3.5.0",
+  "private": true
+}

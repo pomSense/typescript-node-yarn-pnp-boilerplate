@@ -4,8 +4,20 @@
     "module": "commonjs",
     "outDir": "dist",
     "sourceMap": true,
-    "types": ["node"]
+    "types": ["node"],
+    "baseUrl": "."
   },
   "include": ["src/**/*.ts", "__tests__/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["packages/**/__tests__/**", "packages/**/dist/**", "packages/*/**/__tests__/**", "packages/*/**/dist/**"],
+  "references": [
+    {
+      "path": "./packages/package-a"
+    },
+    {
+      "path": "./packages/package-b"
+    },
+    {
+      "path": "./packages/subsystem-1/package-a"
+    }
+  ]
 }
