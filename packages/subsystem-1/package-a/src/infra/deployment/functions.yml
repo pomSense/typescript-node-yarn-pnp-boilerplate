@@ -1,0 +1,38 @@
+# graphql
+graphql:
+  handler: src/infra/server.handler
+  name: ${self:app}-${self:service}-graphql-${sls:stage}
+  events:
+    - http:
+        path: /graphql
+        method: any
+        cors: true
+        authorizer:
+          name: authorizer
+          type: request
+          # TODO:
+          # For now, Disable caching of authorizer
+          # API Gateway uses the specified identity sources as the request authorizer caching key. When caching is enabled, API Gateway calls the authorizer's Lambda function only after successfully verifying that all the specified identity sources are present at runtime. If a specified identify source is missing, null, or empty, API Gateway returns a 401 Unauthorized response without calling the authorizer Lambda function.
+          # identitySource: method.request.header.Authorization
+          identitySource: ''
+          # TODO:
+          # In case if permission revoke from the user and policy is already cached for 30 minute, then we should need to revoke that policy to immediately revoke the access
+          resultTtlInSeconds: 0 # Cached the Authorization response till 30 minute if identitySource is same in request
+
+# Custom Authorizer
+authorizer:
+  handler: src/infra/authorizer.handler
+  name: ${self:app}-${self:service}-authorizer-${sls:stage}
+
+packageA:
+  handler: src/handler.lambda
+  name: ${self:service}-ingress-listener-${sls:stage}
+  events:
+    - http:
+        path: /my-path
+        method: POST
+        cors: true
+        # authorizer:
+        #   name: ${self:custom.testAPIAuthorizerName}
+        #   arn: ${self:custom.testAPIAuthorizerArn}
+        #   type: request
