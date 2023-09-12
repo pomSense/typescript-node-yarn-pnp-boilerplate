@@ -2,6 +2,10 @@
   "name": "typescript-node-yarn-pnp-boilerplate",
   "packageManager": "yarn@3.5.0",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/subsystem-1/*"
+  ],
   "scripts": {
     "commit": "commit-wizard",
     "lint-staged": "lint-staged",
@@ -10,9 +14,13 @@
     "lint:types": "yarn turbo run lint:types",
     "lint:prettier": "yarn turbo run lint:prettier"
   },
-  "workspaces": [
-    "packages/*",
-    "packages/subsystem-1/*"
+  "keywords": [
+    "typescript",
+    "yarn",
+    "pnp",
+    "zero install",
+    "boilerplat",
+    "scaffold"
   ],
   "devDependencies": {
     "@commitlint/cli": "16.2.3",
