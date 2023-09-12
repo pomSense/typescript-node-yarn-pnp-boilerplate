@@ -16,6 +16,7 @@ Features include:
 - Prettier
 - [Husky](#husky) for [pre-commit](#commit-rules) linting enforcement
 - [CSpell](#spell-check) for spell check on commits
+- Serverless Framework setup with Webpack configured in Subsystem-1/package-a
 
 # Getting-started
 
