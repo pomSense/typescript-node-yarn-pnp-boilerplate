@@ -1,0 +1,67 @@
+app: subsystem-1
+service: ${self:app}-package-a
+
+custom:
+  org: my-org
+  defaultStage: dev
+  currentStage: ${opt:stage, self:custom.defaultStage}
+  deploymentBucket:
+    versioning: true
+    accelerate: true
+    blockPublicAccess: true
+    tags:
+      - Key: Environment
+        Value: ${opt:stage, self:custom.defaultStage}
+
+  webpack:
+    excludeFiles: ['src/**/*.d.ts.map', 'src/**/*.d.ts', 'src/**/*.test.ts']
+    webpackConfig: 'webpack.config.js'
+    concurrency: 1 # set to 1 due to GitHub's 2-core runners to prevent OOM
+    serializedCompile: true # backward compatible, this translates to concurrency: 1
+    packager: 'yarn'
+    noInstall: true
+    includeModules:
+      forceExclude:
+        - 'aws-sdk'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: us-east-1
+  deploymentBucket:
+    name: ${self:custom.org}-${self:app}-artifacts
+    serverSideEncryption: AES256
+  versionFunctions: false
+  memorySize: 2048
+  timeout: 10
+  logRetentionInDays: 7
+  stage: ${self:custom.currentStage}
+  environment:
+    NODE_ENV: ${self:custom.currentStage}
+    ENV_STAGE: ${self:custom.currentStage} # having to use this because NODE_ENV is not setting from serverless.yml
+    BASE_URL: http://localhost:3000
+    PROJECT: ${self:service} # used in aws-lambda-stream for the 'source' tag
+    # AWS_LAMBDA_LOG_GROUP_NAME: ${self:service}-${self:custom.currentStage} # used in faults for logging errors to console
+    REGION: 'us-east-1'
+
+functions:
+  packageA:
+    handler: src/handler.lambda
+    name: ${self:service}-ingress-listener-${sls:stage}
+    events:
+      - http:
+          path: /my-path
+          method: POST
+          cors: true
+          # authorizer:
+          #   name: ${self:custom.testAPIAuthorizerName}
+          #   arn: ${self:custom.testAPIAuthorizerArn}
+          #   type: request
+
+plugins:
+  - serverless-webpack
+  - serverless-deployment-bucket
+  - serverless-offline
+
+package:
+  individually: true

@@ -1,0 +1,21 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "composite": true,
+    "lib": ["es2018"],
+    "noEmit": false,
+    "declaration": false,
+    "declarationMap": false,
+    "types": ["node", "jest", "aws-lambda"]
+  },
+  "include": ["./src"],
+  "references": [
+    {
+      "path": "../../package-a/tsconfig.json"
+    },
+    {
+      "path": "../../package-b/tsconfig.json"
+    }
+  ]
+}

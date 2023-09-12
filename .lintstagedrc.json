@@ -1,5 +1,10 @@
 {
   "*": ["cspell --no-must-find-files --no-progress"],
   "**/*.{ts,tsx}": ["prettier --write"],
-  "**/*.{md,yml,json,babelrc,eslintrc,prettierrc}": ["prettier --write", "yarn lint"]
+  "**/*.{md,yml,json,babelrc,eslintrc,prettierrc}": ["prettier --write"],
+  "packages/package-a/*.{ts,tsx}": ["yarn workspace @typescript-node-yarn-pnp-boilerplate/package-a lint:eslint"],
+  "packages/package-b/*.{ts,tsx}": ["yarn workspace @typescript-node-yarn-pnp-boilerplate/package-b lint:eslint"],
+  "packages/subsystem-1/package-a/*.{ts,tsx}": [
+    "yarn workspace @typescript-node-yarn-pnp-boilerplate/subsystem-1-package-a lint:eslint"
+  ]
 }
