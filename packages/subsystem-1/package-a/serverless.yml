@@ -45,18 +45,7 @@ provider:
     REGION: 'us-east-1'
 
 functions:
-  packageA:
-    handler: src/handler.lambda
-    name: ${self:service}-ingress-listener-${sls:stage}
-    events:
-      - http:
-          path: /my-path
-          method: POST
-          cors: true
-          # authorizer:
-          #   name: ${self:custom.testAPIAuthorizerName}
-          #   arn: ${self:custom.testAPIAuthorizerArn}
-          #   type: request
+  - ${file(./src/infra/deployment/functions.yml)}
 
 plugins:
   - serverless-webpack

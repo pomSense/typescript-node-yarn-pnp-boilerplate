@@ -16,6 +16,17 @@
     "lint:prettier": "prettier --write .",
     "lint:types": "tsc --noEmit"
   },
+  "dependencies": {
+    "@apollo/subgraph": "2.0.2",
+    "@graphql-tools/schema": "8.5.0",
+    "apollo-server-core": "3.10.1",
+    "apollo-server-lambda": "3.6.2",
+    "dynamodb-toolbox": "0.3.5",
+    "express": "4.17.3",
+    "graphql": "16.5.0",
+    "graphql-middleware": "6.1.21",
+    "graphql-shield": "7.5.0"
+  },
   "devDependencies": {
     "@babel/core": "7.18.6",
     "@babel/plugin-proposal-decorators": "7.18.6",

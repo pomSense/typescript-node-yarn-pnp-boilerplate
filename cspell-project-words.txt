@@ -1,1 +1,3 @@
 commitlintrc
+IAPIKey
+APIKEY
